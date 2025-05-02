@@ -1,10 +1,9 @@
 let imageWrapper = document.querySelector('.ba-slider_image_wrapper');
-let wrapperWidth = imageWrapper.getBoundingClientRect().width
-
+let wrapperWidth = imageWrapper.getBoundingClientRect().width;
 
 document.querySelectorAll('.ba-slider_overlay_wrap').forEach((e) => {
   e.style.width = `${wrapperWidth}px`;
-})
+});
 
 function handleMove(e) {
   // Get the correct X position whether it's a touch or mouse event
