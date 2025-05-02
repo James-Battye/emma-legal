@@ -13,7 +13,11 @@ export default [
       sourceType: 'module'
     },
     rules: {
-      'no-undef': ['error', { typeof: true }]
+      'no-undef': 'off',
+      'no-restricted-globals': ['error', {
+        name: 'gasp',
+        message: 'Did you mean gsap?'
+      }]
     }
   }
 ];
