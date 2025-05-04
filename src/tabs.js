@@ -115,7 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  tabItems[0].click();
+  setTimeout(() => {
+    tabItems[0].click();
+  }, 200);
   // document.querySelector('.tabs_item_wrap').style.maxHeight =
   //   document.querySelector('.tabs_item_wrap').getBoundingClientRect().height + 'px';
 });
