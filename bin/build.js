@@ -9,7 +9,7 @@ const PRODUCTION = process.env.NODE_ENV === 'production';
 // Config entrypoint files
 const srcDir = join(process.cwd(), 'src');
 const ENTRY_POINTS = readdirSync(srcDir)
-  .filter(file => file.endsWith('.js'))
+  .filter(file => file.endsWith('.js') || file.endsWith('.css'))
   .map(file => join(srcDir, file));
 
 // Config dev serving
