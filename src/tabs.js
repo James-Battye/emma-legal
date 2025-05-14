@@ -1,123 +1,127 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   if (window.innerWidth < 991) return;
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth < 991) return;
 
-//   const tabItems = document.querySelectorAll('.tabs_item');
-//   let activeIndex = null;
-//   let tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power2.out' } });
-//   let offset = 48;
+  const tabItems = document.querySelectorAll('.tabs_item');
+  let activeIndex = null;
+  let tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power2.out' } });
+  let offset = 48;
 
-//   let tabData = {};
+  let scrollTrig = ScrollTrigger.create({
+    trigger: '.tabs_wrap',
+    start: 'top center',
+    end: 'bottom center',
+  });
 
-//   function getElements(tab) {
-//     let elements = {
-//       border: tab.querySelector('.tabs_border_wrap'),
-//       image: tab.querySelector('.tabs_image'),
-//       line: tab.querySelector('.tabs_line'),
-//       heading: tab.querySelector('.tabs_heading'),
-//     };
+  let tabData = {};
 
-//     return elements;
-//   }
+  function getElements(tab) {
+    let elements = {
+      border: tab.querySelector('.tabs_border_wrap'),
+      image: tab.querySelector('.tabs_image'),
+      line: tab.querySelector('.tabs_line'),
+      heading: tab.querySelector('.tabs_heading'),
+    };
 
-//   function getData(tab, index) {
-//     let elements = getElements(tab);
+    return elements;
+  }
 
-//     let headingHeight = elements.heading.getBoundingClientRect().height;
-//     let containerHeight = elements.border.getBoundingClientRect().height;
+  function getData(tab, index) {
+    let elements = getElements(tab);
 
-//     tabData[index] = {
-//       headingHeight,
-//       containerHeight,
-//     };
-//   }
+    let headingHeight = elements.heading.getBoundingClientRect().height;
+    let containerHeight = elements.border.getBoundingClientRect().height;
 
-//   tabItems.forEach((e, i) => {
-//     getData(e, i);
-//   });
+    tabData[index] = {
+      headingHeight,
+      containerHeight,
+    };
+  }
 
-//   // Set all tabs to closed state
-//   function setTabClosed(tab, index) {
-//     let elements = getElements(tab);
+  tabItems.forEach((e, i) => {
+    getData(e, i);
+  });
 
-//     gsap.to(elements.border, {
-//       maxHeight: `${tabData[index].headingHeight + offset}px`,
-//       paddingBottom: '0.5rem',
-//       opacity: 0.2,
-//     });
-//     gsap.to(elements.image, { opacity: 0 });
-//     gsap.to(elements.line, { opacity: 0 });
-//   }
+  // Set all tabs to closed state
+  function setTabClosed(tab, index) {
+    let elements = getElements(tab);
 
-//   tabItems.forEach((tab, idx) => setTabClosed(tab, idx));
+    gsap.to(elements.border, {
+      maxHeight: `${tabData[index].headingHeight + offset}px`,
+      paddingBottom: '0.5rem',
+      opacity: 0.2,
+    });
+    gsap.to(elements.image, { opacity: 0 });
+    gsap.to(elements.line, { opacity: 0 });
+  }
 
-//   tabItems.forEach((tab, index) => {
-//     tab.addEventListener('click', () => {
-//       if (activeIndex === index) {
-//         return; // Already active
-//       }
+  tabItems.forEach((tab, idx) => setTabClosed(tab, idx));
 
-//       // Animate out the currently active tab, if any
-//       if (activeIndex !== null) {
-//         let prevElement = getElements(tabItems[activeIndex]);
+  tabItems.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      if (activeIndex === index) {
+        return; // Already active
+      }
 
-//         gsap
-//           .timeline({ defaults: { duration: 0.6, ease: 'power2.inOut' } })
-//           .to(prevElement.image, { opacity: 0 }, 0)
-//           .to(
-//             prevElement.border,
-//             {
-//               maxHeight: `${tabData[activeIndex].headingHeight + offset}px`,
-//               paddingBottom: '0.5rem',
-//               opacity: 0.2,
-//             },
-//             0
-//           )
-//           .to(prevElement.line, { opacity: 0 }, 0);
-//       }
+      // Animate out the currently active tab, if any
+      if (activeIndex !== null) {
+        let prevElement = getElements(tabItems[activeIndex]);
 
-//       let elements = getElements(tab);
-//       let headingBottom = elements.heading.getBoundingClientRect().bottom;
-//       let borderTop = elements.border.getBoundingClientRect().top;
-//       let initialHeight = headingBottom - borderTop + 16; // 1rem = 16px
+        gsap
+          .timeline({ defaults: { duration: 0.6, ease: 'power2.inOut' } })
+          .to(prevElement.image, { opacity: 0 }, 0)
+          .to(
+            prevElement.border,
+            {
+              maxHeight: `${tabData[activeIndex].headingHeight + offset}px`,
+              paddingBottom: '0.5rem',
+              opacity: 0.2,
+            },
+            0
+          )
+          .to(prevElement.line, { opacity: 0 }, 0);
+      }
 
-//       console.log(initialHeight);
-//       // Animate in the clicked tab with a staggered effect
-//       tl.to(elements.border, { maxHeight: `${tabData[index].containerHeight}px`, opacity: 1 })
-//         .to(elements.image, { opacity: 1 }, '-=0.2')
-//         .to(elements.line, { opacity: 1 }, '<');
+      let elements = getElements(tab);
+      let headingBottom = elements.heading.getBoundingClientRect().bottom;
+      let borderTop = elements.border.getBoundingClientRect().top;
+      let initialHeight = headingBottom - borderTop + 16; // 1rem = 16px
 
-//       // Cancel previous loop if user clicks
-//       if (tl.loopTween) {
-//         tl.loopTween.kill();
-//         tl.loopTween = null;
-//       }
+      console.log(initialHeight);
+      // Animate in the clicked tab with a staggered effect
+      tl.to(elements.border, { maxHeight: `${tabData[index].containerHeight}px`, opacity: 1 })
+        .to(elements.image, { opacity: 1 }, '-=0.2')
+        .to(elements.line, { opacity: 1 }, '<');
 
-//       tl.loopTween = gsap.fromTo(
-//         elements.line,
-//         { backgroundPositionY: `${-tabData[index].containerHeight * 2}px` },
-//         {
-//           backgroundPositionY: `${-tabData[index].containerHeight / 1.8}px`,
-//           duration: 6,
-//           ease: 'linear',
-//           // onComplete: function () {
-//           //   if (activeIndex === index) {
-//           //     if (tab.nextElementSibling) {
-//           //       tab.nextElementSibling.click();
-//           //     } else {
-//           //       tabItems[0].click();
-//           //     }
-//           //   }
-//           // },
-//         }
-//       );
+      // Cancel previous loop if user clicks
+      if (tl.loopTween) {
+        tl.loopTween.kill();
+        tl.loopTween = null;
+      }
 
-//       activeIndex = index;
-//     });
-//   });
+      tl.loopTween = gsap.fromTo(
+        elements.line,
+        { backgroundPositionY: `${-tabData[index].containerHeight * 2}px` },
+        {
+          backgroundPositionY: `${-tabData[index].containerHeight / 1.8}px`,
+          duration: 6,
+          ease: 'linear',
+          onComplete: function () {
+            if (activeIndex === index && scrollTrig.isActive) {
+              if (tab.nextElementSibling) {
+                tab.nextElementSibling.click();
+              } else {
+                tabItems[0].click();
+              }
+            }
+          },
+        }
+      );
 
-//   setTimeout(() => {
-//     tabItems[0].click();
-//   }, 200);
-//   // document.querySelector('.tabs_item_wrap').style.maxHeight =
-//   //   document.querySelector('.tabs_item_wrap').getBoundingClientRect().height + 'px';
-// });
+      activeIndex = index;
+    });
+  });
+
+  setTimeout(() => {
+    tabItems[0].click();
+  }, 200);
+});
