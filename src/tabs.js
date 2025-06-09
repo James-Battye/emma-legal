@@ -1,127 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth < 991) return;
 
-  const tabItems = document.querySelectorAll('.tabs_item');
-  let activeIndex = null;
-  let tl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power2.out' } });
-  let offset = 48;
+  const wrappers = document.querySelectorAll('.tabs_item');
+  const offset = 48;
+  const tabHeights = [];
 
-  let scrollTrig = ScrollTrigger.create({
-    trigger: '.tabs_wrap',
-    start: 'top center',
-    end: 'bottom center',
+  // 1) Measure and initialize all tabs to "collapsed"
+  wrappers.forEach((wrap, i) => {
+    const heading = wrap.querySelector('.tabs_heading');
+    const border = wrap.querySelector('.tabs_border_wrap');
+    const img = wrap.querySelector('.tabs_image');
+    const line = wrap.querySelector('.tabs_line');
+
+    const headingH = heading.getBoundingClientRect().height;
+    const fullH = border.getBoundingClientRect().height;
+    tabHeights[i] = { collapsed: headingH + offset, expanded: fullH };
+
+    gsap.set(border, { maxHeight: tabHeights[i].collapsed + 'px', paddingBottom: '0.5rem', opacity: 0.2 });
+    gsap.set(img, { opacity: 0 });
+    gsap.set(line, { height: '0%' });
+    gsap.set(wrap.querySelectorAll('.tabs_p'), { scale: 0.7, opacity: 0 });
   });
 
-  let tabData = {};
+  // 2) Open the first tab
+  gsap.set(wrappers[0].querySelector('.tabs_border_wrap'), { maxHeight: tabHeights[0].expanded + 'px', opacity: 1 });
+  gsap.set(wrappers[0].querySelector('.tabs_image'), { opacity: 1 });
+  gsap.set(wrappers[0].querySelector('.tabs_line'), { height: '100%' });
+  gsap.set(wrappers[0].querySelectorAll('.tabs_heading, .tabs_p'), { scale: 1, opacity: 1 });
 
-  function getElements(tab) {
-    let elements = {
-      border: tab.querySelector('.tabs_border_wrap'),
-      image: tab.querySelector('.tabs_image'),
-      line: tab.querySelector('.tabs_line'),
-      heading: tab.querySelector('.tabs_heading'),
-    };
-
-    return elements;
-  }
-
-  function getData(tab, index) {
-    let elements = getElements(tab);
-
-    let headingHeight = elements.heading.getBoundingClientRect().height;
-    let containerHeight = elements.border.getBoundingClientRect().height;
-
-    tabData[index] = {
-      headingHeight,
-      containerHeight,
-    };
-  }
-
-  tabItems.forEach((e, i) => {
-    getData(e, i);
+  // 3) Build scroll-driven timeline
+  const totalScroll = wrappers.length * 200; // adjust per-tab scroll distance
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.tabs_wrap',
+      start: 'center 52%',
+      end: `+=${totalScroll}`,
+      scrub: true,
+      pin: true,
+      pinSpacing: true,
+    }
   });
 
-  // Set all tabs to closed state
-  function setTabClosed(tab, index) {
-    let elements = getElements(tab);
+  wrappers.forEach((wrap, i) => {
+    if (i === 0) return; // skip first
 
-    gsap.to(elements.border, {
-      maxHeight: `${tabData[index].headingHeight + offset}px`,
+    const prev = wrappers[i - 1];
+    const curr = wrap;
+
+    tl.to(prev.querySelector('.tabs_border_wrap'), {
+      maxHeight: tabHeights[i - 1].collapsed + 'px',
       paddingBottom: '0.5rem',
-      opacity: 0.2,
-    });
-    gsap.to(elements.image, { opacity: 0 });
-    gsap.to(elements.line, { opacity: 0 });
-  }
+      opacity: 0.2
+    }, '>')
+      .to(prev.querySelector('.tabs_image'), { opacity: 0 }, '<')
+      .to(prev.querySelector('.tabs_line'), { height: '0%' }, '<')
+      .to(prev.querySelectorAll('.tabs_p'), { scale: 0.7, opacity: 0 }, '<')
 
-  tabItems.forEach((tab, idx) => setTabClosed(tab, idx));
-
-  tabItems.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      if (activeIndex === index) {
-        return; // Already active
-      }
-
-      // Animate out the currently active tab, if any
-      if (activeIndex !== null) {
-        let prevElement = getElements(tabItems[activeIndex]);
-
-        gsap
-          .timeline({ defaults: { duration: 0.6, ease: 'power2.inOut' } })
-          .to(prevElement.image, { opacity: 0 }, 0)
-          .to(
-            prevElement.border,
-            {
-              maxHeight: `${tabData[activeIndex].headingHeight + offset}px`,
-              paddingBottom: '0.5rem',
-              opacity: 0.2,
-            },
-            0
-          )
-          .to(prevElement.line, { opacity: 0 }, 0);
-      }
-
-      let elements = getElements(tab);
-      let headingBottom = elements.heading.getBoundingClientRect().bottom;
-      let borderTop = elements.border.getBoundingClientRect().top;
-      let initialHeight = headingBottom - borderTop + 16; // 1rem = 16px
-
-      console.log(initialHeight);
-      // Animate in the clicked tab with a staggered effect
-      tl.to(elements.border, { maxHeight: `${tabData[index].containerHeight}px`, opacity: 1 })
-        .to(elements.image, { opacity: 1 }, '-=0.2')
-        .to(elements.line, { opacity: 1 }, '<');
-
-      // Cancel previous loop if user clicks
-      if (tl.loopTween) {
-        tl.loopTween.kill();
-        tl.loopTween = null;
-      }
-
-      tl.loopTween = gsap.fromTo(
-        elements.line,
-        { backgroundPositionY: `${-tabData[index].containerHeight * 2}px` },
-        {
-          backgroundPositionY: `${-tabData[index].containerHeight / 1.8}px`,
-          duration: 6,
-          ease: 'linear',
-          onComplete: function () {
-            if (activeIndex === index && scrollTrig.isActive) {
-              if (tab.nextElementSibling) {
-                tab.nextElementSibling.click();
-              } else {
-                tabItems[0].click();
-              }
-            }
-          },
-        }
-      );
-
-      activeIndex = index;
-    });
+      .to(curr.querySelector('.tabs_border_wrap'), {
+        maxHeight: tabHeights[i].expanded + 'px',
+        opacity: 1
+      }, '<')
+      .to(curr.querySelector('.tabs_image'), { opacity: 1 }, '<')
+      .to(curr.querySelector('.tabs_line'), { height: '100%' }, '<')
+      .to(curr.querySelectorAll('.tabs_heading, .tabs_p'), { scale: 1, opacity: 1 }, '<');
   });
-
-  setTimeout(() => {
-    tabItems[0].click();
-  }, 200);
 });

@@ -1,0 +1,716 @@
+[
+  {
+    "id": "89894b6d-cf3f-dfb6-51d8-63b0d19309e1",
+    "name": "Custom Code",
+    "description": "Include on every page of the site. Contains global styles that should run in designer view & on the published site.",
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "824b76d0-0ddb-5ed5-8ae6-09771aaa568a",
+    "name": "Btn / Main",
+    "description": null,
+    "group": "Btn"
+  },
+  {
+    "id": "ef6f7715-7082-0e78-9b80-b290d4fc5f0f",
+    "name": "Btn / Play",
+    "description": null,
+    "group": "Btn"
+  },
+  {
+    "id": "973d4f8d-b9e1-3d51-3d84-7a9efc662c8f",
+    "name": "Icon / Arrow",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "54c81638-84d0-9a5e-6328-555943eb2575",
+    "name": "Icon / X",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "9d2d1e50-103f-d310-b352-08c163e684c9",
+    "name": "Icon / Arrow Full",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "8c9612ef-f9fe-ddac-8bdb-b04868fe8a86",
+    "name": "• Section / Simple",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "0b86bbf2-83a2-3b1b-20e3-c535c15c9297",
+    "name": "Grid Guide",
+    "description": "Gives a visual preview of grid guides. Helpful for checking alignment between sections.",
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "3c7de3d6-58ac-a383-9a7c-2b483f0bf7d0",
+    "name": "Global / Eyebrow",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "41f9978c-8579-b33c-818f-9f6f86574abb",
+    "name": "Global / Visual",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "625bf776-8cb1-fa1f-a6f9-6b7f7ac28358",
+    "name": "Starter / JS",
+    "description": "Unlink before use. Include as last child within component. Replace 'yourFunctionName' in the embed with a name that is specific to your component.",
+    "group": "Starter"
+  },
+  {
+    "id": "fc7624c6-48da-610a-1f56-983264845d2d",
+    "name": "Starter / CSS",
+    "description": "Unlink before use. Include as first child within component.",
+    "group": "Starter"
+  },
+  {
+    "id": "ff646fea-153c-0ace-5c8e-ac7249c9b618",
+    "name": "• Section / Starter Full",
+    "description": null,
+    "group": null
+  },
+  {
+    "id": "0254e612-9509-0757-3332-f6be61ca6889",
+    "name": "Global / Clickable",
+    "description": "This makes its whole parent clickable & can be a link tag or a button tag if the url field is left empty. It has hidden text that is readable by screen readers and has a z-index: 0 only in designer view to keep any relative content clickable.",
+    "group": "Global"
+  },
+  {
+    "id": "870ec616-3125-2e09-d694-70d917b0a178",
+    "name": "Section / Hero / Placeholder",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "6988c782-9d84-f50b-88aa-e362ff213d22",
+    "name": "Global / Section Space",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "9cd849af-5c85-da69-3983-2e49dba72900",
+    "name": "Global / Section",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "dc1263ce-fed3-7e5a-a08f-0423913e378e",
+    "name": "Fluid Sizes",
+    "description": null,
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "ef0597e2-9ec1-c890-ceba-f61926a36e78",
+    "name": "Global / Btn Group",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "b9130e59-aa4e-07ef-a822-eda529bf75ca",
+    "name": "Global / Heading",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "99ca2e6d-2b82-bb82-6df8-bd4932d075bd",
+    "name": "Global / Paragraph",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "cfe16031-f44d-4a67-3ea7-9298adf7238a",
+    "name": "Global / Div",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "89a6d8c0-49b6-ddc5-f2d9-90d86675a194",
+    "name": "Form / Main",
+    "description": null,
+    "group": "Form"
+  },
+  {
+    "id": "39a856c3-f857-7c26-307f-b73399139f4a",
+    "name": "Form / Checkbox",
+    "description": null,
+    "group": "Form"
+  },
+  {
+    "id": "c2fd5c20-65cf-6b26-fc6c-059fb6547f9c",
+    "name": "Form / Radio",
+    "description": null,
+    "group": "Form"
+  },
+  {
+    "id": "4691487f-404c-ddef-cd99-f79676913b7a",
+    "name": "Global / Content",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "41701021-dae9-0260-190f-f542a56d2f06",
+    "name": "• Section / Slider",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "a6697d33-431b-3f54-ff1d-3696d3e42cb3",
+    "name": "Icon / Dotted Arrow",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "81408ac1-1bb7-320b-d73d-3e7b92ccc04c",
+    "name": "• Section / Card Image Hero",
+    "description": null,
+    "group": "Heros"
+  },
+  {
+    "id": "646c53f0-84eb-cdeb-d8b2-86c33e1b48dd",
+    "name": "• Section / Logo Marque",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "50847254-c502-d8cc-f80b-3df01d192d8d",
+    "name": "Background Line",
+    "description": null,
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "9c7630f2-4831-f11c-0683-d1ebe323c0cd",
+    "name": "• Section / Before After Slider",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "5e76a7fe-c7e8-19c6-8f40-c9491ef404f2",
+    "name": "• Section / Stats",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "c1889132-d9c7-6c78-85f0-68e9275e8757",
+    "name": "• Section / Tabs",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "7773168c-a3b6-e034-4db7-ccc9b4c9f2a9",
+    "name": "✌︎ Tabs / Item",
+    "description": null,
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "20b0198c-c7db-b988-ac16-d4a53136f70b",
+    "name": "• Section / How Emma Works",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "bcd2694f-9df4-9bf4-597e-2544b458b159",
+    "name": "♠︎ Horizontal / Card",
+    "description": null,
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "4ec8a2a8-3e27-90b1-06c5-92327f4fee9f",
+    "name": "• Section / Card Image Feature",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "128e48bb-5673-9a76-95b9-bc87a426c2a1",
+    "name": "• Section / Security List",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "253ff60a-27e3-829d-4275-bbd2cc9747e8",
+    "name": "⚔︎ Text Block Module",
+    "description": null,
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "dd493962-1f8b-19c7-c20e-534b62e9838f",
+    "name": "• Section / Resources List",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "811f1692-348c-57ed-58f5-5bff3dc63260",
+    "name": "• Section / FAQs",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "e3a0f08f-8710-2da7-e0f8-20ff1ce12a80",
+    "name": "• Section / Form",
+    "description": null,
+    "group": "Form"
+  },
+  {
+    "id": "88621812-536a-eea0-0c50-e1089a3622dc",
+    "name": "• Section / Hero / Half and Half",
+    "description": null,
+    "group": "Starter"
+  },
+  {
+    "id": "8fe239e2-fa40-c241-e4e7-84d8a28035d9",
+    "name": "• Section / Feature / Stacked List",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "1eda0ade-7e74-0bcc-e207-a734c336d2c6",
+    "name": "• Section / Feature / Folding Steps",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "32b70561-c661-2364-375f-448ec864a952",
+    "name": "】Fold Item",
+    "description": null,
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "5764b6b0-734d-e074-0d44-a024b50bfd7e",
+    "name": "• Section / Horizontal / Features",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "a71d1c6a-0598-5708-a20b-b6b488b79eef",
+    "name": "Horizontal Feature",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "c7f7359c-18d2-9f6b-e60f-c9daf68746f4",
+    "name": "• Section / 3 Column / Text List",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "f7758986-8207-2616-5f02-fd8a0d0ae04f",
+    "name": "• Section / Header / Split No Image",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "954b66a0-3f50-b4d4-c1e4-83062ae6cdcc",
+    "name": "• Section / Image",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "54e85a06-c1f9-2272-ead9-9d15f8d1fce9",
+    "name": "• Section / Scrolling Text",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "1d90c403-4a37-3e4f-c777-94c5e6ddc44b",
+    "name": "• Section / 2 Column / List",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "c477b862-2119-4aea-9952-c6d0d502d280",
+    "name": "• Section / Security Features",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "252e26f8-0606-383a-23e7-e88eb44c78aa",
+    "name": "• Section / Form / Split",
+    "description": null,
+    "group": "Form"
+  },
+  {
+    "id": "d1fbe1c6-1a19-f554-5e46-cd113dd6ec10",
+    "name": "• Section / Video",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "941c4de0-e5fa-b387-6488-ecf950137999",
+    "name": "Footer",
+    "description": null,
+    "group": "Nav"
+  },
+  {
+    "id": "0bdb45eb-c000-9d1d-0476-3c427db569fb",
+    "name": "• Section / Rich Text",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "d3d1fc35-1d2e-7773-1236-1931821e2e74",
+    "name": "Nav / Card Link",
+    "description": null,
+    "group": "Nav"
+  },
+  {
+    "id": "632324d2-2f5a-c526-f25b-c2143a7f5443",
+    "name": "Icon / Page",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "45d2ce00-514e-9ce0-4749-55fdcba9f33a",
+    "name": "Icon / Security",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "764af0c7-e743-c2c3-df9b-264fc76753b9",
+    "name": "Icon / Documentation",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "f926f675-a283-70c1-0d57-a32d58fa3300",
+    "name": "Nav / Callout Card",
+    "description": null,
+    "group": "Nav"
+  },
+  {
+    "id": "7a074145-4ebd-130e-bab8-bfd1c533055b",
+    "name": "Icon / Careers",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "d54808e6-efa0-deb9-61dd-2f2698ae9270",
+    "name": "Icon / About Us",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "c3656854-7960-490c-3976-50fd862b2ff8",
+    "name": "Icon / Events",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "aa6cd7c9-eed1-a4ee-e193-cec3197a16f4",
+    "name": "Icon / Customer",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "e2e14bff-4018-e94e-4b80-1930a37df8e7",
+    "name": "Icon / Podcasts",
+    "description": null,
+    "group": "Icon"
+  },
+  {
+    "id": "53b85179-2d80-164d-96f4-6dd497a651ae",
+    "name": "Nav / Dropdown / Product",
+    "description": null,
+    "group": "Nav"
+  },
+  {
+    "id": "83c38d75-93d6-1465-b07f-0f7993a0500a",
+    "name": "Nav / Dropdown / Events",
+    "description": null,
+    "group": "Nav"
+  },
+  {
+    "id": "be30c03f-e9a4-2a1a-af07-3d9ad42830ab",
+    "name": "Nav / Dropdown / Company",
+    "description": null,
+    "group": "Nav"
+  },
+  {
+    "id": "e4453e6b-da2f-cfb7-ed9c-9c994da425a9",
+    "name": "Nav / Hover JS",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "780713b7-fc3d-9c2b-263d-0dc1941e0c60",
+    "name": "Module / Nav / CSS",
+    "description": null,
+    "group": "CSS"
+  },
+  {
+    "id": "2c69f5d5-0bb9-cda8-8a65-4bd3a7d93b6a",
+    "name": "Nav",
+    "description": null,
+    "group": "Nav"
+  },
+  {
+    "id": "2bf551bb-a180-aaf5-b249-b554e86e3be2",
+    "name": "Nav / Mobile Menu JS",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "2ae4dded-0d0c-ed8a-a24a-20179e41d42a",
+    "name": "Section / Resources Featured Hero",
+    "description": null,
+    "group": "CMS"
+  },
+  {
+    "id": "db345469-5988-dbf2-f8cd-76393c44f176",
+    "name": "Section / Resources Grid",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "052d4786-5233-cb30-9819-6bcef034ee7a",
+    "name": "Module / CMS List Item",
+    "description": null,
+    "group": "CMS"
+  },
+  {
+    "id": "bab58c3d-78cf-407a-4b4e-d95677235dad",
+    "name": "Section / Blog Hero",
+    "description": null,
+    "group": "Heros"
+  },
+  {
+    "id": "422a3f15-e31d-b0b0-4943-c148c8750d1e",
+    "name": "Global / Plain Paragraph",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "7f203e79-4e53-edc3-8af6-9088f13ea342",
+    "name": "Global / Heading Plain",
+    "description": null,
+    "group": "Global"
+  },
+  {
+    "id": "137ad4cc-6adb-89be-c933-27d08ae6c438",
+    "name": "Section / Related Posts",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "a1c70979-134c-5a4f-29d5-8abb4000a2cb",
+    "name": "Horizontal Scroll / JS / GSAP",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "e5e4fe94-20d5-e27b-b51b-d45bf0b6997f",
+    "name": "Module / Stat / Item",
+    "description": null,
+    "group": "Modules"
+  },
+  {
+    "id": "d0c412ba-e0dd-0dae-a46b-019266239e11",
+    "name": "CSS / Tabs",
+    "description": null,
+    "group": "CSS"
+  },
+  {
+    "id": "60bb8937-11a0-5959-f780-5cd6ea160b47",
+    "name": "JS / Tabs",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "aa917dc6-5adf-f171-a321-31c3f863e3d6",
+    "name": "JS / Fold / GSAP",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "c076876c-fac1-2cff-bdbb-df12db826e46",
+    "name": "CSS / Fold",
+    "description": null,
+    "group": "CSS"
+  },
+  {
+    "id": "c0238695-83c2-23aa-64cf-75d6f97083c4",
+    "name": "JS / Stats / Counter Animation",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "1fb32d87-9178-6a33-a74e-ef5a9a7735fb",
+    "name": "JS / How Emma Works / GSAP",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "fff5c7cd-b3c4-da8e-4bfe-5c41e5922547",
+    "name": "CSS / How Emma Works",
+    "description": null,
+    "group": "CSS"
+  },
+  {
+    "id": "701102e5-5f70-0911-8814-8cdde773dd11",
+    "name": "JS / Before After / Mouse Move",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "3e3ad4fc-faf2-3bab-bd9a-775cdb2dd512",
+    "name": "JS / Before After / Container Height",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "ca16b7e5-661f-aab5-2c46-9d65a391c2e3",
+    "name": "CSS / Before After",
+    "description": null,
+    "group": "CSS"
+  },
+  {
+    "id": "19960b43-6b58-615e-33c7-5cd823659436",
+    "name": "CSS / FAQ",
+    "description": null,
+    "group": "CSS"
+  },
+  {
+    "id": "efa6b82e-aec7-240f-ae0d-2d4fe0735a8a",
+    "name": "JS / Scrolling Text / GSAP",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "77204ba4-5268-2fd3-a83c-4229f0442a7c",
+    "name": "JS / Card Hero / Scale GSAP",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "585265be-0732-7e13-2d94-65608cec7c2b",
+    "name": "JS / Resources List / Lenis Resize",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "eaa2065f-f103-4b97-870a-69fe6a908beb",
+    "name": "CSS / Resources List / Gradient",
+    "description": null,
+    "group": "CSS"
+  },
+  {
+    "id": "af2a0e46-6000-9290-f1ef-3f853a68f0c8",
+    "name": "Nav / Dropdown / Use Case",
+    "description": null,
+    "group": "Nav"
+  },
+  {
+    "id": "0e52ee0f-c952-2d33-3381-07950e2540ed",
+    "name": "Pagination Button (unlink)",
+    "description": null,
+    "group": "Btn"
+  },
+  {
+    "id": "d0a998c9-d86b-9ed0-4a3b-4643c6dc47be",
+    "name": "Empty Links",
+    "description": null,
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "0cd1eb30-cd4d-ed0e-df54-c86d4405cbac",
+    "name": "• Section / Hero / Events",
+    "description": null,
+    "group": "Starter"
+  },
+  {
+    "id": "4ad843dd-bec4-4bb2-2a50-2d3aca5ddecb",
+    "name": "Section / Events Full List",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "4b2bedc1-4f2a-9196-0874-937ab832b087",
+    "name": "Form 'What to expect' Block",
+    "description": null,
+    "group": "Modules"
+  },
+  {
+    "id": "fa00bd44-7e40-e590-5263-b3baa44fa685",
+    "name": "Nav / Shrink JS",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "068e2af1-cdb8-ff43-cfc1-fc88542c737b",
+    "name": "CSS / FAQs",
+    "description": null,
+    "group": "CSS"
+  },
+  {
+    "id": "5933fdd0-f51a-33e0-56e8-ca8506eda702",
+    "name": "JS / FAQ Logic",
+    "description": null,
+    "group": "JS"
+  },
+  {
+    "id": "f66825e7-41cd-0cc0-2925-dd3120458fe8",
+    "name": "Page / Blog",
+    "description": null,
+    "group": "Miscellaneous"
+  },
+  {
+    "id": "b0fde10a-6a29-e4c8-2dab-88336bcab129",
+    "name": "Section / Simple Paragraph",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "cd2f4ced-ea7d-3c9d-c082-2cba5f8b0002",
+    "name": "Section / CS Hero",
+    "description": null,
+    "group": "Heros"
+  },
+  {
+    "id": "ef3f6da3-055c-50be-0985-5353c63d2de7",
+    "name": "Section / Paragraph + Image",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "27f89d02-6741-45c9-c08f-472cf653a18e",
+    "name": "Section / Related Customer Stories",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "1e35b9e6-ee29-90ef-6a4e-479228ef3398",
+    "name": "Customer Stories Card",
+    "description": null,
+    "group": "Modules"
+  },
+  {
+    "id": "26f67bbd-9860-701e-5885-e8c2b1e0c584",
+    "name": "Section / Customer Stories List",
+    "description": null,
+    "group": "Feature Sections"
+  },
+  {
+    "id": "4e877d44-e2a7-c3bf-83d3-aa917433b26a",
+    "name": "Section / Ebook Hero",
+    "description": null,
+    "group": "Heros"
+  },
+  {
+    "id": "688d7e9b-2219-2ad4-d7da-0a3567ac6a22",
+    "name": "Author Block",
+    "description": null,
+    "group": "Modules"
+  },
+  {
+    "id": "00ab4a3b-07da-36b4-a5e3-5813878b4b6c",
+    "name": "Section / Featured CS",
+    "description": null,
+    "group": "CMS"
+  }
+]
